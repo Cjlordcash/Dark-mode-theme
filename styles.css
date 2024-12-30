@@ -1,0 +1,138 @@
+* {
+  padding: 0;
+  margin: 0;
+  font-family: "Poppins", sans-serif;
+}
+
+:root {
+  --primary-color: blue;
+  --secondary-color: #fff;
+}
+
+.dark-theme {
+  --primary-color: #111;
+  --secondary-color: #fff;
+}
+.container {
+  width: 100%;
+  height: 100vh;
+  background-color: var(--primary-color);
+  position: relative;
+}
+.logo {
+  cursor: pointer;
+  font-size: 30px;
+  position: relative;
+  color: var(--secondary-color);
+}
+.logo::after {
+  content: " ";
+  width: 75px;
+  height: 2px;
+  background: var(--secondary-color);
+  position: absolute;
+  bottom: -2px;
+  left: 20px;
+}
+
+#moonIcon {
+  width: 25px;
+  cursor: pointer;
+  margin-bottom: 8px;
+}
+nav ul {
+  text-align: right;
+  flex: 1;
+}
+nav {
+  width: 80%;
+  display: flex;
+  margin: auto;
+  padding: 8px 10px;
+  align-items: center;
+  justify-content: space-between;
+}
+
+nav ul li {
+  list-style: none;
+  display: inline-block;
+  margin: 10px 15px;
+}
+nav ul li a {
+  text-decoration: none;
+  color: var(--secondary-color);
+}
+nav ul li a:hover {
+  color: #f34607;
+}
+.details {
+  margin-left: 10%;
+  margin-top: 15%;
+}
+
+span {
+  color: #f30707;
+}
+.details h1 {
+  font-size: 40px;
+  color: var(--secondary-color);
+  margin-bottom: 14px;
+}
+
+.details p {
+  line-height: 18px;
+  color: var(--secondary-color);
+}
+.details a {
+  background: var(--secondary-color);
+  margin: 16px 0;
+  padding: 8px 12px;
+  text-decoration: none;
+  display: inline-block;
+  color: var(--primary-color);
+  border-radius: 5px;
+}
+
+.img-div {
+  width: 40%;
+  height: 75%;
+  position: absolute;
+  bottom: 0;
+  right: 90px;
+}
+.img-div img {
+  height: 100%;
+  position: absolute;
+  left: 50%;
+  bottom: 0;
+  transform: translateX(-50%);
+  transition: bottom 1s, left 1s;
+}
+.img-div:hover .back-img {
+  bottom: 40px;
+}
+
+.img-div:hover .girl-img {
+  left: 54%;
+}
+
+@media (max-width: 870px) {
+  ul {
+    display: none;
+  }
+}
+@media (max-width: 760px) {
+  .img-div {
+    width: 30%;
+    height: 60%;
+    position: absolute;
+    bottom: 0;
+    right: 130px;
+  }
+  .details {
+    margin-left: 8%;
+  }
+  nav {
+    margin-left: 5%;
+  }
+}
